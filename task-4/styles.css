@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #0b1220;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 64px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 18, 32, 0.9);
+}
+
+.navbar-container h1 {
+  font-size: 22px;
+  color: #10b981;
+}
+
+.navbar-subcontainer-1 {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.menu, .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  gap: 4px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a, .submenu a {
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: block;
+}
+
+.menu a:hover, .submenu a:hover,
+.dropdown:hover > a {
+  color: #f1f5f9;
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.submenu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 200px;
+  padding: 8px;
+  background: #0d1520;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.22s ease;
+}
+
+.dropdown:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.login-button {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f1f5f9;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 255, 178, 0.3);
+  border-radius: 5px;
+  background: rgba(0, 255, 178, 0.06);
+}
+
+.login-button:hover {
+  background: rgba(0, 255, 178, 0.12);
+  border-color: #10b981;
+  box-shadow: 0 0 14px rgba(0, 255, 178, 0.2);
+}

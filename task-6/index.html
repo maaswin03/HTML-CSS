@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tabbed Content</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="tabs">
+      <input type="radio" name="tab" id="about" checked />
+      <input type="radio" name="tab" id="teams" />
+      <input type="radio" name="tab" id="players" />
+
+      <div class="tab-labels">
+        <label for="about">About</label>
+        <label for="teams">Teams</label>
+        <label for="players">Players</label>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-content">
+          <div class="content about">
+            <h2>About IPL</h2>
+            <p>
+              The Indian Premier League (IPL) is a professional Twenty20 cricket
+              league in India. It is one of the most popular and richest cricket
+              leagues in the world.Founded in 2008, IPL features franchise-based teams representing
+              different cities. It combines sports, entertainment, and global
+              talent.
+            </p>
+          </div>
+
+          <div class="content teams">
+            <h2>IPL Teams</h2>
+            <ol>
+              <li>Chennai Super Kings (CSK)</li>
+              <li>Mumbai Indians (MI)</li>
+              <li>Royal Challengers Bangalore (RCB)</li>
+              <li>Kolkata Knight Riders (KKR)</li>
+              <li>Delhi Capitals (DC)</li>
+              <li>Sunrisers Hyderabad (SRH)</li>
+              <li>Rajasthan Royals (RR)</li>
+              <li>Lucknow Super Giants (LSG)</li>
+              <li>Gujarat Titans (GT)</li>
+            </ol>
+          </div>
+
+
+          <div class="content players">
+            <h2>Top Players</h2>
+            <div>
+              <h3>MS Dhoni</h3>
+              <p>Captain of CSK, known for finishing matches calmly.</p>
+            </div>
+
+            <div>
+              <h3>Virat Kohli</h3>
+              <p>One of the best batsmen in the world, plays for RCB.</p>
+            </div>
+
+            <div>
+              <h3>Rohit Sharma</h3>
+              <p>Captain of Mumbai Indians, multiple IPL title winner.</p>
+            </div>
+
+            <div>
+              <h3>Jasprit Bumrah</h3>
+              <p>World-class fast bowler, deadly in death overs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

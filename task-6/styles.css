@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 5%;
+  font-family: "Space Grotesk", sans-serif;
+  background: #0b1220;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab-labels {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-labels label {
+  padding: 10px 20px;
+  background: rgba(11, 18, 32, 0.9);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+}
+
+.tab-labels label:hover {
+  color: #f1f5f9;
+  border: 1px solid #10b981;
+}
+
+.content {
+  display: none;
+  color: #f1f5f9;
+  padding: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 5px;
+  animation: fade 0.3s ease;
+}
+
+.content:hover {
+  border: 1px solid #10b981;
+}
+
+.content h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0 0 15px 0;
+}
+
+.content h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0 0 0 0;
+}
+
+.content p {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+  flex-grow: 1;
+}
+
+.content ol {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.content li {
+  margin-bottom: 15px;
+}
+
+#about:checked ~ .tab-content .about {
+  display: block;
+}
+
+#teams:checked ~ .tab-content .teams {
+  display: block;
+}
+
+#players:checked ~ .tab-content .players {
+  display: block;
+}
+
+#about:checked ~ .tab-labels label[for="about"],
+#teams:checked ~ .tab-labels label[for="teams"],
+#players:checked ~ .tab-labels label[for="players"] {
+  background: #10b981;
+  color: #f1f5f9;
+}
