@@ -38,7 +38,6 @@ body {
   align-items: center;
   background: rgba(11, 18, 32, 0.85);
   backdrop-filter: blur(14px);
-  transition: opacity 0.2s ease;
   opacity: 0;
   visibility: hidden;
 }
