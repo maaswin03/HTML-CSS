@@ -1,0 +1,62 @@
+:root {
+  --color-bg: #0b1220;
+  --color-surface: rgba(11, 18, 32, 0.9);
+  --color-border: rgba(148, 163, 184, 0.15);
+  --color-primary: #10b981;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --radius-sm: 5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 5%;
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.grid-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.grid-header {
+  font-size: 35px;
+  color: var(--color-text-primary);
+  margin: 1% 0 2% 0;
+  letter-spacing: 0;
+}
+
+.primary-btn,
+.secondary-btn {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.primary-btn {
+  color: var(--color-text-primary);
+  background-color: var(--color-primary);
+  border: 1px solid rgba(0, 255, 178, 0.2);
+}
+
+.secondary-btn {
+  color: var(--color-text-primary);
+  background: rgba(11, 18, 32, 0.95);
+  border: 1px solid rgba(0, 255, 178, 0.2);
+}

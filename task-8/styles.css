@@ -63,6 +63,10 @@ input:checked + label::after {
   display: none;
 }
 
+.accordion > input.item3 {
+  display: none;
+}
+
 #item1:checked ~ .content {
   display: block;
 }
@@ -71,6 +75,6 @@ input:checked + label::after {
   display: block;
 }
 
-#item3:checked ~ .content {
+#item3:checked ~ .item3 .content {
   display: block;
 }

@@ -1,15 +1,233 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Task - 9</title>
-    <link rel="stylesheet" href="styles.css" />
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet"
+      />
+      <title>Task - 9 Grid and Flexbox</title>
+      <link rel="stylesheet" href="../global.css" />
+      <link rel="stylesheet" href="styles.css" />
+    </head>
   </head>
   <body>
+    <!-- Layout -->
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+          <div class="logo">IPL</div>
+          <div>
+            <h1>IPL 2026</h1>
+            <p>Indian Premier League</p>
+          </div>
+        </div>
+
+        <!-- Sidebar Main -->
+        <div class="sidebar-main">
+          <a href="#" class="active">Home</a>
+          <a href="#">Teams</a>
+          <a href="#">Players</a>
+          <a href="#">Schedule</a>
+          <a href="#">Points Table</a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Main content Header -->
+        <header class="header">
+          <h1>Top 10 Indian Cricketers</h1>
+          <p>Based on their performances</p>
+        </header>
+
+        <!-- Main content Body -->
+        <div class="grid-container">
+          <!-- Grid Item - 1 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/57.png"
+                alt="MS Dhoni"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>M S Dhoni</h1>
+              <p>WK - Batter</p>
+              <div class="extra-content">
+                <p>Thala for a reason</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 2 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/2.png"
+                alt="Virat Kohli"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Virat Kohli</h1>
+              <p>Batter</p>
+              <div class="extra-content">
+                <p>King Kohli</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 3 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/6.png"
+                alt="Rohit Sharma"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Rohit Sharma</h1>
+              <p>Batter</p>
+              <div class="extra-content">
+                <p>Hitman of India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 4 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/12.png"
+                alt="Shreyas Iyer"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Shreyas Iyer</h1>
+              <p>Batter</p>
+              <div class="extra-content">
+                <p>Stylish Stroke Player</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 5 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/54.png"
+                alt="Hardik Pandya"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Hardik Pandya</h1>
+              <p>All-rounder</p>
+              <div class="extra-content">
+                <p>Game Changer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 6 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/62.png"
+                alt="Shubman Gill"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Shubman Gill</h1>
+              <p>Batter</p>
+              <div class="extra-content">
+                <p>Prince of Indian Cricket</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 7 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/19.png"
+                alt="KL Rahul"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>KL Rahul</h1>
+              <p>WK - Batter</p>
+              <div class="extra-content">
+                <p>Classy Performer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 8 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/9.png"
+                alt="Jasprit Bumrah"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Jasprit Bumrah</h1>
+              <p>Bowler</p>
+              <div class="extra-content">
+                <p>Yorker Specialist</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 9 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/164.png"
+                alt="Ishan Kishan"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Ishan Kishan</h1>
+              <p>WK - Batter</p>
+              <div class="extra-content">
+                <p>Aggressive Opener</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Item - 10 -->
+          <div class="grid">
+            <div class="grid-image-container">
+              <img
+                src="https://documents.iplt20.com/ipl/IPLHeadshot2025/110.png"
+                alt="Axar Patel"
+                class="grid-image"
+              />
+            </div>
+            <div class="grid-contents">
+              <h1>Axar Patel</h1>
+              <p>All-rounder</p>
+              <div class="extra-content">
+                <p>Reliable All-rounder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

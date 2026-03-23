@@ -1,121 +1,116 @@
-body {
-  margin: 0;
-  padding: 5%;
-  font-family: "Space Grotesk", sans-serif;
-  background: #0b1220;
-}
-
-.grid-badge {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-  color: #f1f5f9;
-  background: #10b981;
-  border: 1px solid #10b981;
-  padding: 5px 10px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-}
-
-.grid-header {
-  font-size: 35px;
-  color: #f1f5f9;
-  margin: 1% 0 2% 0;
-  letter-spacing: 0;
-}
-
 input[type="radio"] {
   display: none;
 }
 
+body {
+  padding: 2%;
+}
 
+/* Carousel Container */
+.carousel {
+  width: min(100%, 1500px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+/* Slides Wrapper */
 .slides {
   display: flex;
-  width: 300%;
-  transition: transform 0.5s ease;
-  border: 1px solid white;
-}
-
-.slides > div {
   width: 100%;
-  flex-shrink: 0;
+  transition: all 0.35s ease;
 }
 
-.grid {
-  width: 300px;
-  border-radius: 5px;
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  padding: 2% 0 0% 0;
-  transition: all 0.3s ease;
+/* Individual Slide */
+.slide {
+  min-width: 100%;
+  height: clamp(260px, 52vw, 520px);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.grid:hover {
-  border: 1px solid #10b981;
-  transform: translateY(-4px);
-  background-color: #10b98115;
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 18, 32, 0.5);
 }
 
-.grid-image-container {
-  display: flex;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
-  justify-content: center;
+/* Slide Backgrounds */
+.slide-1 {
+  background-image: url("https://assets.bcci.tv/watermarkoutput/bcci/photos/7005/885a9615-a868-4efa-a6e0-add7c777697f.jpg");
 }
 
-.grid-image {
-  height: 200px;
+.slide-2 {
+  background-image: url("https://assets.bcci.tv/watermarkoutput/bcci/photos/1872/eeda2a6e-ce0b-4b59-b7b4-2244c68cc7b2.jpg");
 }
 
-.grid-contents h1 {
-  font-size: 20px;
+.slide-3 {
+  background-image: url("https://assets.bcci.tv/watermarkoutput/bcci/photos/1872/1fde5147-22e4-4120-b139-fa23277a8545.jpg");
+}
+
+.slide-content {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  max-width: 560px;
   color: #f1f5f9;
-  text-align: center;
-  margin-bottom: 0;
 }
 
-.grid-contents p {
-  font-size: 12px;
-  color: #94a3b8;
-  text-align: center;
-  margin-top: 2px;
+.slide-content h2 {
+  margin: 6px 0 0;
+  color: var(--color-text-primary);
 }
 
-.extra-content {
-  opacity: 0;
-  margin-bottom: 0;
+.slide-content p {
+  margin: 8px 0 0;
+  color: var(--color-text-primary);
 }
 
-.grid:hover .extra-content {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.extra-content p {
-  font-size: 14px;
-  color: #94a3b8;
-  text-align: center;
-  margin-top: 2px;
-}
-
-
-#slide1:checked ~ .slides {
-  transform: translateX(0%);
-}
-
-#slide2:checked ~ .slides {
-  transform: translateX(-100%);
-}
-
-#slide3:checked ~ .slides {
-  transform: translateX(-200%);
+/* Navigation Dots */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
 }
 
 .nav label {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: white;
-  margin: 5px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
+  background: rgba(241, 245, 249, 0.35);
   cursor: pointer;
+}
+
+/* Slide Control Logic */
+#slide1:checked ~ .carousel .slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel .slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel .slides {
+  transform: translateX(-200%);
+}
+
+#slide1:checked ~ .nav label[for="slide1"],
+#slide2:checked ~ .nav label[for="slide2"],
+#slide3:checked ~ .nav label[for="slide3"] {
+  background: #10b981;
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
 }

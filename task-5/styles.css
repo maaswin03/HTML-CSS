@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  gap:2%;
 }
 
 .primary-btn {
@@ -43,15 +44,15 @@ body {
 }
 
 .modal-content {
-  border-radius: 5px;
-  padding: 2%;
+  width: 350px;
+  padding: 16px;
+  border-radius: 6px;
   border: 1px solid rgba(148, 163, 184, 0.15);
 }
 
 .modal-content:hover {
-  background: rgba(11, 18, 32, 0.95);
-  border: 1px solid #10b981;
   transform: translateY(-4px);
+  border: 1px solid rgba(148, 163, 184, 0.3);
 }
 
 .modal-content h2 {
@@ -61,14 +62,20 @@ body {
 }
 
 .close-button {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  color: #f1f5f9;
+  color: #fff;
   text-decoration: none;
   background-color: red;
-  width: 100;
-  padding: 1px 5px;
-  border-radius: 5px;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
 }
 
 .close-button:hover {
@@ -81,6 +88,74 @@ body {
 }
 
 #modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  margin-top: 10%;
+}
+
+.primary-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: #10b981;
+  border: 1px solid rgba(0, 255, 178, 0.2);
+  text-decoration: none;
+}
+
+.primary-btn:hover {
+  background-color: #0f9e6e;
+  border: 1px solid rgba(0, 255, 178, 0.4);
+}
+
+.secondary-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid rgba(241, 245, 249, 0.2);
+  text-decoration: none;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(241, 245, 249, 0.1);
+  border: 1px solid rgba(241, 245, 249, 0.4);
+}
+
+.modal1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  background: rgba(11, 18, 32, 0.85);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+#modal1:target {
   opacity: 1;
   visibility: visible;
 }

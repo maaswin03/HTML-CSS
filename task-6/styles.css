@@ -20,7 +20,7 @@ input[type="radio"] {
   background: rgba(11, 18, 32, 0.9);
   cursor: pointer;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: all 1.2s ease;
   border: 1px solid rgba(148, 163, 184, 0.15);
   color: #94a3b8;
 }
@@ -31,12 +31,13 @@ input[type="radio"] {
 }
 
 .content {
-  display: none;
-  color: #f1f5f9;
-  padding: 20px;
-  border: 1px solid rgba(148, 163, 184, 0.15);
+  opacity: 0;
+  transform: translateY(10px);
+  border: 1px solid rgba(148, 163, 184, 0.15); 
   border-radius: 5px;
-  animation: fade 0.3s ease;
+  padding: 2%;
+  position: absolute;
+  transition: all 0.3s ease;
 }
 
 .content:hover {
@@ -75,16 +76,12 @@ input[type="radio"] {
   margin-bottom: 15px;
 }
 
-#about:checked ~ .tab-content .about {
-  display: block;
-}
-
-#teams:checked ~ .tab-content .teams {
-  display: block;
-}
-
+#about:checked ~ .tab-content .about,
+#teams:checked ~ .tab-content .teams,
 #players:checked ~ .tab-content .players {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
 }
 
 #about:checked ~ .tab-labels label[for="about"],
