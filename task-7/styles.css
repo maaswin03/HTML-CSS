@@ -13,6 +13,7 @@ body {
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 8px;
+  position: relative;
 }
 
 /* Slides Wrapper */
@@ -112,5 +113,90 @@ body {
     left: 12px;
     right: 12px;
     bottom: 12px;
+  }
+}
+
+/* New CSS (added at bottom): arrows + separate auto slider */
+.arrows .arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.55);
+  color: #fff;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+}
+
+.arrows .prev {
+  left: 12px;
+}
+
+.arrows .next {
+  right: 12px;
+}
+
+#slide1:checked ~ .carousel .l1,
+#slide1:checked ~ .carousel .r1,
+#slide2:checked ~ .carousel .l2,
+#slide2:checked ~ .carousel .r2,
+#slide3:checked ~ .carousel .l3,
+#slide3:checked ~ .carousel .r3 {
+  display: block;
+}
+
+.auto-section {
+  width: min(100%, 1500px);
+  margin: 28px auto 0;
+}
+
+.auto-wrap {
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+.auto-track {
+  display: flex;
+  animation: autoMove 9s infinite;
+}
+
+.auto-slide {
+  position: relative;
+  min-width: 100%;
+  height: clamp(260px, 52vw, 520px);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.auto-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 18, 32, 0.5);
+}
+
+@keyframes autoMove {
+  0%,
+  30% {
+    transform: translateX(0);
+  }
+  33%,
+  63% {
+    transform: translateX(-100%);
+  }
+  66%,
+  96% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
