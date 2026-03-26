@@ -122,16 +122,17 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(15, 23, 42, 0.55);
-  color: #fff;
-  text-align: center;
-  line-height: 36px;
+  width: 50px;
+  height: 50px;
+  background: black;
+  color: white;
   cursor: pointer;
   z-index: 2;
   user-select: none;
+  text-align: center;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .arrows .prev {
@@ -142,18 +143,41 @@ body {
   right: 12px;
 }
 
+.arrows1 .arrow1 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 500px;
+  background: transparent;
+  color: transparent;
+  line-height: 36px;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+}
+
+.arrows1 .prev {
+  left: 12px;
+}
+
+.arrows1 .next {
+  right: 12px;
+}
+
 #slide1:checked ~ .carousel .l1,
 #slide1:checked ~ .carousel .r1,
 #slide2:checked ~ .carousel .l2,
 #slide2:checked ~ .carousel .r2,
 #slide3:checked ~ .carousel .l3,
 #slide3:checked ~ .carousel .r3 {
-  display: block;
+  display: flex;
 }
 
 .auto-section {
   width: min(100%, 1500px);
-  margin: 28px auto 0;
+  margin: 28px auto;
 }
 
 .auto-wrap {

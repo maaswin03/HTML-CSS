@@ -206,3 +206,11 @@ body {
     display: none;
   }
 }
+
+.grid-container:hover .grid {
+  opacity: 0.5;
+}
+
+.grid-container .grid:hover {
+  opacity: 1;
+}
